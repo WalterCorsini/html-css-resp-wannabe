@@ -127,6 +127,15 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
-@media screen and (max-widht: 768px) {
+@media screen and (max-width: 768px) {
     
-}
+    main, 
+    header,
+    .lessons .container,
+    .steps .container,
+    .why-us .container{
+        width: 90%;
+    }
+
+} 
+
