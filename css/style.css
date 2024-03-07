@@ -130,15 +130,16 @@ img {
 
  /* 768px e fino ai 1160px */
  @media screen and (min-width: 768px) and (max-width: 1160px) {
-
+/* risp eSsatta max-widht:768  e mediaquery solo max 1168 meglio max width 768 che widht 100% perche altrimenti se hai un pc grande rischi di non dargli una misura fissa */
     .container{
-        width: 100%;
+        /* width: 100%; */
+        max-width: 768px;
     }
  }
 
 /* 768 px */
 @media screen and (max-width: 768px) {
-    
+/* risposta esatta width:100% perche container ha una larghezza fissa */
     .container{
         width: 90%;
     }
@@ -147,19 +148,26 @@ img {
 
 /* 480 px */
 @media screen and (max-width: 480px) {
+/* risposta esatta era .row do flex direction column e ai vari lessons,steps,why-us .col do widht:100% e margin bottom 40px per aggiungere spazio sotto la colonna a .steps,why-us margin bottom 0 e */
+    
+    .row{
+        flex-direction: column;
+    }
 
     .lessons .row,
     .steps .row,
     .why-us .row{
-        display: flex;
+        /* display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: center; */
+        width: 100%;
     }
 
     .lessons .col,
     .steps .col,
     .why-us .col{
-        width: 90%;
+        /* width: 90%;  risp sbagliata*/
+        width: 100%;    
   } 
 
   .why-us,
